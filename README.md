@@ -1,1 +1,0 @@
-# gamescard.github.io
