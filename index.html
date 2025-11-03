@@ -1,19 +1,142 @@
 <!DOCTYPE html>
-<HTML>
-<head>
-<meta charset="utf-8">
-<style>
-#backround {width:2000px;}
-#password {margin:1000px;}
-#input {r:5;}
-</style>
-</head>
-<body>
-<div id="backround">
-<img src="macos-ventura-macos-13-macos-2022-stock-dark-mode-5k-retina-3840x2160-8133.jpg">
-</div>
-<div id="password">
-<input id="input">
-</div>
-</body>
-</HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>calculator</title>
+        <style>
+    body {background-color:rgb(240, 240, 240);}
+       
+            #title {
+                background-color:rgb(189, 189, 189);
+
+                height:40px;
+            }
+            #h1 {
+                margin-left:120px;
+            }
+            #calc {
+                
+                height:20px;
+                width:141px;
+            }
+            #ans {
+                background-color:rgb(222, 222, 222);
+                height:104px;
+                font-size:18px;
+                
+            }
+            #span {
+                font-size:50px;
+                padding:5px;
+            }
+            #c {
+                position:absolute;
+                top:96px;
+                left:174px;
+                width:80px;
+                height:194px;
+                background-color:rgb(207, 207, 207);
+                font-size:30px;
+                            }
+        </style>
+    </head>
+    <body>
+    <div id="title">
+        <h1 id="h1">
+            Aaron's calculator
+        </h1>
+    </div>
+    <div id="display">
+    <button id="st.bt">
+        Start value
+    </button>
+    <button id="end.bt">
+        End value
+    </button>
+    <button id="alg.eq">algerbraic expresion</button><br>
+    <label id="st.val">
+        start value
+    </label><br>
+    <input id="start-value"><br><br>
+    <label>
+        diffrence
+    </label><br>
+    <input id="gap"><Br><br>
+    <label>
+        term
+    </label><br>
+    <input id="n"><br><br>
+    <button id="calc">
+        calculate
+    </button>
+    
+    <p id="ans">answer=<br>
+    <button id="c">
+        C
+    </button>
+    <span id="span">0</span></p>
+        <script>
+        
+        var ans=0;
+        var diff=0;
+        var st=0;
+        var gap=0;
+        var n=0;
+        
+        var stvl=true;
+        var algeq=false;
+        
+        document.getElementById("c").onclick=function(){
+            document.getElementById("start-value").value="";
+            document.getElementById("gap").value="";
+            document.getElementById("n").value="";
+            document.getElementById("span").textContent="0";
+        }
+        
+        document.getElementById("st.bt").onclick=function(){
+            stvl=true;
+            algeq=false;
+            document.getElementById("st.val").textContent="start value"
+        }
+        document.getElementById("end.bt").onclick=function(){
+            stvl=false;
+            algeq=false;
+            document.getElementById("st.val").textContent="End value"
+        }
+         document.getElementById("alg.eq").onclick=function(){
+            algeq=true; 
+            stvl=false;
+            document.getElementById("st.val").textContent="Algerbraic expresion"
+        }   
+        
+        document.getElementById("calc").onclick=function(){
+         st=document.getElementById("start-value").value;
+         gap=document.getElementById("gap").value;
+         n=document.getElementById("n").value;
+        if(algeq===false){var diffText=gap+"*"+n;
+        diff = eval(diffText);
+        var text;
+        if(stvl===true && algeq===false){
+         text=st+"+"+diff;
+        }
+        else if(stvl===false && algeq===false){
+         text=st+"-"+diff;   
+        }
+        }
+        else if(stvl===false && algeq===true){
+            
+            text=st+"*"+n+"+"+gap;
+            
+        }
+        ans=eval(text)
+            document.getElementById("span").textContent =ans;
+        }
+        
+       
+        
+        </script>
+    </div>
+    
+
+    </body>
+</html>
