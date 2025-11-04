@@ -1,11 +1,19 @@
 
-    body {background-color:rgb(240, 240, 240);}
-       
-            #title {
-                background-color:rgb(189, 189, 189);
+   body {
+    background-color:rgb(240, 240, 240);
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;              /* full screen height */
+}
 
-                height:40px;
-            }
+/* NEW: the fixed 400×400 "canvas" */
+#wrapper {
+    width:400px;
+    height:400px;
+    transform-origin: top left;
+}
             #h1 {
                 margin-left:120px;
             }
