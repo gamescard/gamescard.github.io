@@ -1,5 +1,6 @@
-  var ans=0;
+      var ans=0;
         var diff=0;
+        var stn=0;
         var st=0;
         var gap=0;
         var n=0;
@@ -34,13 +35,15 @@
         
         document.getElementById("calc").onclick=function(){
          st=Number(document.getElementById("start-value").value);
+         stn=document.getElementById("start-value").value;
          gap=Number(document.getElementById("gap").value);
          n=Number(document.getElementById("n").value);
         
      if (algeq) {
+          var expr = stn.replace(/x/g, gap);
                 // y = kx + b
                 // k = st, x = gap, b = n
-                ans = st * gap + n;
+                ans = eval(expr);
                 if (isNaN(ans)) {
                     document.getElementById("span").textContent = "Error";
                 } else {
@@ -60,4 +63,6 @@
                 }
             }
         }
+        
+       
         
