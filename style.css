@@ -33,7 +33,7 @@
                 padding:5px;
             }
             #c {
-                position:absolute;
+                position:relative;
                 top:10%;
                 left:170px;
                 width:60%;
