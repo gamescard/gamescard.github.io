@@ -64,11 +64,4 @@
                      
             }
         }
-        
-        let canvas=document.getElementById("graph");
-                      let ctx = canvas.getContext("2d");
-                          ctx.beginPath();
-                          ctx.moveTo(0, 0);
-                          ctx.lineTo(gap, ans);
-                          ctx.stroke();
-        
+       
