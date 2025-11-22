@@ -47,5 +47,7 @@ body {
             #graph {
               position:absolute;
               top:18%;
-              left:80%;
+              left:100%;
+              border:black;
             }
+
