@@ -14,7 +14,17 @@
             document.getElementById("n").value="";
             document.getElementById("span").textContent="0";
         }
-        
+
+
+            function safeMathEval(expr) {
+   
+    if (!/^[0-9+\-*/().\s]+$/.test(expr)) {
+        throw new Error("Invalid characters in expression");
+    }
+
+  
+    return Function('"use strict"; return (' + expr + ')')();
+}
         document.getElementById("st.bt").onclick=function(){
             stvl=true;
             algeq=false;
@@ -43,7 +53,7 @@
           var expr = stn.replace(/x/g, gap);
                 // y = kx + b
                 // k = st, x = gap, b = n
-                ans = eval(expr);
+                ans = SafeMathEval(expr);
                 if (isNaN(ans)) {
                     document.getElementById("span").textContent = "Error";
                 } else {
@@ -65,10 +75,15 @@
             }
         }
         
-        let canvas=document.getElementById("graph");
-                      let ctx = canvas.getContext("2d");
-                          ctx.beginPath();
-                          ctx.moveTo(0, 0);
-                          ctx.lineTo(gap, ans);
-                          ctx.stroke();
-        
+var canvas = document.getElementById("graph");
+  if (canvas && canvas.getContext) {
+    var ctx = canvas.getContext("2d");
+
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.beginPath();
+    // Start from bottom-left
+    ctx.moveTo(0, canvas.height);
+    ctx.lineTo(gap, ans);
+    ctx.stroke();
