@@ -16,15 +16,8 @@
         }
 
 
-            function safeMathEval(expr) {
-   
-    if (!/^[0-9+\-*/().\s]+$/.test(expr)) {
-        throw new Error("Invalid characters in expression");
-    }
-
+           
   
-    return Function('"use strict"; return (' + expr + ')')();
-}
         document.getElementById("st.bt").onclick=function(){
             stvl=true;
             algeq=false;
@@ -53,7 +46,7 @@
           var expr = stn.replace(/x/g, gap);
                 // y = kx + b
                 // k = st, x = gap, b = n
-                ans = SafeMathEval(expr);
+                ans = math.evaluate(expr);
                 if (isNaN(ans)) {
                     document.getElementById("span").textContent = "Error";
                 } else {
