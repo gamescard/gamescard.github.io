@@ -66,11 +66,12 @@
 
                      
             }
+           
         }
-        
-var canvas = document.getElementById("graph");
-  if (canvas && canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+              
+        var canvas = document.getElementById("graph");
+        if (canvas && canvas.getContext) {
+       var ctx = canvas.getContext("2d");
 
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -80,3 +81,6 @@ var canvas = document.getElementById("graph");
     ctx.moveTo(0, canvas.height);
     ctx.lineTo(gap, ans);
     ctx.stroke();
+
+  }
+ }
