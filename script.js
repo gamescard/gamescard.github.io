@@ -69,18 +69,8 @@
            
         }
               
-        var canvas = document.getElementById("graph");
-        if (canvas && canvas.getContext) {
-       var ctx = canvas.getContext("2d");
-
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    ctx.beginPath();
-    // Start from bottom-left
-    ctx.moveTo(0, canvas.height);
-    ctx.lineTo(gap, ans);
-    ctx.stroke();
-
+       graph = function(
+              draw=function(){
+             
   }
  }
