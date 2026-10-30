@@ -13,6 +13,7 @@
             document.getElementById("gap").value="";
             document.getElementById("n").value="";
             document.getElementById("span").textContent="0";
+            Graph();
         }
 
 
@@ -76,9 +77,9 @@
           for(var Xval=0; Xval<n; Xval++){
                 ctx.fillStyle = rgb(0,0,0);
                 ctx.stroke();
-                point(Xval, ans);
+                strokeText("·", Xval, ans);
       }   
   }
  }
-);
+
 };
