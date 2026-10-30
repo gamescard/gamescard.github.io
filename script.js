@@ -68,9 +68,12 @@
             }
            
         }
-              
-       graph = function(
+        canvas{      
+       graph = function(){
               draw=function(){
-             
+          for(var Xval=0; Xval<n; Xval++){
+                point(Xval, ans);
+      }   
   }
  }
+};
