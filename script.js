@@ -7,7 +7,7 @@
         
         var stvl=true;
         var algeq=false;
-        
+        var canvas = document.getElementById("canvas");
         document.getElementById("c").onclick=function(){
             document.getElementById("start-value").value="";
             document.getElementById("gap").value="";
@@ -68,7 +68,8 @@
             }
            
         }
-        canvas{      
+        ctx = canvas.getContext;  
+         ctx.drawImage(     
        graph = function(){
               draw=function(){
           for(var Xval=0; Xval<n; Xval++){
@@ -76,4 +77,5 @@
       }   
   }
  }
+);
 };
