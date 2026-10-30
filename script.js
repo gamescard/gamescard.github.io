@@ -7,7 +7,7 @@
         
         var stvl=true;
         var algeq=false;
-        var canvas = document.getElementById("canvas");
+        
         document.getElementById("c").onclick=function(){
             document.getElementById("start-value").value="";
             document.getElementById("gap").value="";
@@ -68,11 +68,14 @@
             }
            
         }
-        ctx = canvas.getContext;  
-         ctx.drawImage(     
-       graph = function(){
+         
+       graph = document.getElementById("graph");
+            var ctx = graph.getContext('2d');
+             Graph = function(){
               draw=function(){
           for(var Xval=0; Xval<n; Xval++){
+                ctx.fillStyle = rgb(0,0,0);
+                ctx.stroke();
                 point(Xval, ans);
       }   
   }
