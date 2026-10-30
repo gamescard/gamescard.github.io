@@ -3,7 +3,7 @@
 
 var quadratic = document.getElementById("quadratic");
 quadratic.onclick = function(){
-  document.getElementById("display").innerHTML = '
+  document.getElementById("display").innerHTML = `
     <html>
     <body>
     <div id="display">
@@ -40,7 +40,7 @@ quadratic.onclick = function(){
     </div>
     </body>
     </html>
-';
+`;
 var calc = document.getElementById("calc");
 var ans;
 var a = document.getElementById("a").value;
