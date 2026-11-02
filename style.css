@@ -8,7 +8,51 @@ body {
   height: 100vh;             
 }
 
+#quadratic {
+  width: 400px;
+  height: 400px;
+  transform-origin: top left;
+  position: relative;
+}
 
+            #h1 {
+                margin-left:120px;
+            }
+            #calc {
+                
+                height:20px;
+                width:141px;
+            }
+            #ans {
+                background-color:rgb(222, 222, 222);
+                height:104px;
+                font-size:18px;
+                
+            }
+            #span {
+                font-size:50px;
+                padding:5px;
+            }
+            #c {
+                position:absolute;
+                top:25%;
+                left:65%;
+                width:20%;
+                height:45%;
+                background-color:rgb(207, 207, 207);
+                font-size:30px;
+                            }
+
+            #graph {
+              position:absolute;
+              top:18%;
+              left:100%;
+              border:black;  
+
+
+
+  
+}
 #wrapper {
   width: 400px;
   height: 400px;
